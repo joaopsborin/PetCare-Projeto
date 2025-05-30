@@ -1,0 +1,668 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1e429f;
+    --secondary: #1e429f;
+    --text: #213547;
+    --bg-light: #f8f9fa;
+    --border: #ddd;
+    --red: #e63946;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: white;
+}
+
+/* Header styles */
+header {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-img {
+    height: 32px;
+}
+
+.search {
+    flex: 1;
+    max-width: 600px;
+}
+
+.search input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon img {
+    height: 24px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login, .register {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.separator {
+    color: var(--text);
+    opacity: 0.5;
+}
+
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 2rem;
+    border-top: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+.category {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+/* Hero section */
+.hero {
+    background: white;
+    padding: 2rem 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.hero-text h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.hero-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #173580;
+}
+
+/* Emergency section */
+.emergency {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.emergency-content {
+    background: var(--bg-light);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emergency-text h3 {
+    color: var(--red);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.emergency-text p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.emergency-button {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* Appointment banner */
+.appointment-banner {
+    background: var(--bg-light);
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 900;
+}
+
+.appointment-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appointment-content p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.appointment-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.emergency-link {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.schedule-button {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* When to visit section */
+.when-to-visit {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.visit-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.visit-text {
+    flex: 1;
+}
+
+.visit-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.visit-text p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.visit-text ul {
+    list-style: none;
+}
+
+.visit-text li {
+    margin-bottom: 0.75rem;
+    color: #666;
+}
+
+.visit-image {
+    flex: 1;
+}
+
+.visit-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Vaccines section */
+.vaccines {
+    background: var(--bg-light);
+    padding: 4rem 0;
+}
+
+.vaccines-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.vaccines-image {
+    flex: 1;
+}
+
+.vaccines-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.vaccines-text {
+    flex: 1;
+}
+
+.vaccines-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.vaccines-text p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.vaccine-types {
+    margin-bottom: 2rem;
+}
+
+.vaccine-types h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.vaccine-types ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.vaccine-types li {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.pet-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.pet-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.pet-button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Services section */
+.services {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.services h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-icon {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.service-icon img {
+    height: 48px;
+}
+
+.service-card p {
+    font-weight: 500;
+}
+
+/* New pet section */
+.new-pet {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.new-pet-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.new-pet-text {
+    flex: 1;
+}
+
+.new-pet-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.new-pet-text p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.new-pet-text ul {
+    list-style: none;
+}
+
+.new-pet-text li {
+    margin-bottom: 0.75rem;
+    color: #666;
+}
+
+.new-pet-image {
+    flex: 1;
+}
+
+.new-pet-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Footer styles */
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+
+.newsletter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.newsletter p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form input,
+.newsletter-form select {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    min-width: 200px;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 2rem;
+    background: white;
+    color: var(--secondary);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+.privacy-policy {
+    font-size: 0.75rem !important;
+    opacity: 0.8;
+}
+
+.privacy-policy a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.app-download {
+    text-align: center;
+}
+
+.qr-code {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.app-store,
+.play-store {
+    background: white;
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.app-store:hover,
+.play-store:hover {
+    opacity: 0.9;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .hero-content,
+    .visit-content,
+    .vaccines-content,
+    .new-pet-content {
+        flex-direction: column;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .app-download {
+        grid-column: span 3;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-icons {
+        display: none;
+    }
+
+    .search {
+        margin: 0;
+    }
+
+    .categories {
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .app-download {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .app-download {
+        grid-column: span 1;
+    }
+}
